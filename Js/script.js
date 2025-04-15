@@ -76,6 +76,7 @@ const renderTeams = (teamMembers) => {
 
 // * Load Memebers
 renderTeams(teamMembers);
+
 //* Add new member from form
 addNewMember.addEventListener("submit", (e) => {
   e.preventDefault();
