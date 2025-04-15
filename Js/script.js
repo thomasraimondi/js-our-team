@@ -2,6 +2,14 @@
 const memberGrid = document.getElementById("member-grid");
 const addNewMember = document.getElementById("add-new-member");
 
+// * Get User Input
+const userInputs = document.querySelectorAll(".accordion-body .form-control");
+const userName = document.getElementById("user-name");
+const userSurname = document.getElementById("user-surname");
+const userRole = document.getElementById("user-job-title");
+const userEmail = document.getElementById("user-email");
+const userImg = document.getElementById("user-img-path");
+
 const teamMembers = [
   {
     name: "Marco Bianchi",
@@ -43,6 +51,7 @@ const teamMembers = [
 
 // * Create card member
 const cardMember = (member) => {
+  const { name, role, email, img } = member;
   return `<div class="col-12 col-md-6 col-lg-4">
           <div class="card">
             <img src="${member.img}" class="card-img-top" alt="..." />
@@ -56,13 +65,31 @@ const cardMember = (member) => {
 };
 
 // * Add card in html
-let cardsHtml = ``;
-for (const member of teamMembers) {
-  console.log(member);
-  cardsHtml += cardMember(member);
-}
-memberGrid.innerHTML = cardsHtml;
+const renderTeams = (teamMembers) => {
+  let cardsHtml = ``;
+  for (const member of teamMembers) {
+    cardsHtml += cardMember(member);
+  }
+  memberGrid.innerHTML = cardsHtml;
+};
 
+// * Load Memebers
+renderTeams(teamMembers);
+
+//* Add new member from form
 addNewMember.addEventListener("submit", (e) => {
   e.preventDefault();
+
+  const name = userName.value + userSurname.value;
+  const role = userRole.value;
+  const email = userEmail.value;
+  const img = userImg.value;
+
+  const member = { name, role, email, img };
+
+  console.log(member);
+
+  cardMember(member);
+
+  memberGrid.innerHTML += cardMember(member);
 });
