@@ -42,8 +42,8 @@ const teamMembers = [
 
 // * Create card member
 const cardMember = (member) => {
-  return `<div class="col-4">
-          <div class="card" style="width: 18rem">
+  return `<div class="col-12 col-md-6 col-lg-4">
+          <div class="card">
             <img src="${member.img}" class="card-img-top" alt="..." />
             <div class="card-body">
               <h5 class="card-title">${member.name}</h5>
