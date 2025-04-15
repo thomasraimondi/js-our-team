@@ -1,5 +1,6 @@
 // * Get Dom element
 const memberGrid = document.getElementById("member-grid");
+const addNewMember = document.getElementById("add-new-member");
 
 const teamMembers = [
   {
@@ -61,3 +62,7 @@ for (const member of teamMembers) {
   cardsHtml += cardMember(member);
 }
 memberGrid.innerHTML = cardsHtml;
+
+addNewMember.addEventListener("submit", (e) => {
+  e.preventDefault();
+});
