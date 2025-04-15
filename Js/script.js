@@ -1,6 +1,7 @@
 // * Get Dom element
 const memberGrid = document.getElementById("member-grid");
 const addNewMember = document.getElementById("add-new-member");
+const accordion = document.querySelector(".accordion-button");
 
 // * Get User Input
 const userInputs = document.querySelectorAll(".accordion-body .form-control");
@@ -54,11 +55,11 @@ const cardMember = (member) => {
   const { name, role, email, img } = member;
   return `<div class="col-12 col-md-6 col-lg-4">
           <div class="card">
-            <img src="${member.img}" class="card-img-top" alt="..." />
+            <img src="${img}" class="card-img-top" alt="..." />
             <div class="card-body">
-              <h5 class="card-title">${member.name}</h5>
-              <div class="job-title">${member.role}</div>
-              <div class="mail">${member.email}</div>
+              <h5 class="card-title">${name}</h5>
+              <div class="job-title">${role}</div>
+              <div class="mail">${email}</div>
             </div>
           </div>
         </div>`;
@@ -75,7 +76,6 @@ const renderTeams = (teamMembers) => {
 
 // * Load Memebers
 renderTeams(teamMembers);
-
 //* Add new member from form
 addNewMember.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -83,13 +83,10 @@ addNewMember.addEventListener("submit", (e) => {
   const name = userName.value + userSurname.value;
   const role = userRole.value;
   const email = userEmail.value;
-  const img = userImg.value;
+  const img = `./img/${userImg.value}`;
 
   const member = { name, role, email, img };
-
-  console.log(member);
-
-  cardMember(member);
-
-  memberGrid.innerHTML += cardMember(member);
+  teamMembers.push(member);
+  accordion.click();
+  renderTeams(teamMembers);
 });
