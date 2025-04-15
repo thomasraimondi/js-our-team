@@ -28,6 +28,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="stylesheet" href="./Css/style.css" />
   </head>
   <body>
     <nav class="navbar bg-body-tertiary">
@@ -38,118 +39,97 @@
             <span>Boolean</span>
           </a>
         </div>
-        <div class="action">
-          </div>
-          <!-- <a href="pages/addforms.html">
-            <button class="btn btn-outline-danger">
-              <i class="fa-solid fa-plus"></i> Add Team Member
-            </button>
-          </a> -->
-        </div>
+        <div class="action"></div>
       </div>
     </nav>
     <div class="container">
-        <div class="accordion accordion-flush" id="accordionFlushExample">
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button
-                  class="accordion-button collapsed"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#flush-collapseOne"
-                  aria-expanded="false"
-                  aria-controls="flush-collapseOne"
-                >
-                  Add Team Member
-                </button>
-              </h2>
-              <div
-                id="flush-collapseOne"
-                class="accordion-collapse collapse"
-                data-bs-parent="#accordionFlushExample"
-              >
-                <div class="accordion-body">
-                  <form id="add-new-member" class="d-flex flex-column mx-5">
-                    <div class="mb-3">
-                      <label for="user-name" class="form-label"
-                        >Nome</label
-                      >
-                      <input type="Nome" class="form-control" id="user-name" />
-                    </div>
-                    <div class="mb-3">
-                      <label for="user-surname" class="form-label"
-                        >Cognome</label
-                      >
-                      <input
-                        type="Cognome"
-                        class="form-control"
-                        id="user-surname"
-                      />
-                    </div>
-                    <div class="mb-3">
-                      <label for="user-job-title" class="form-label"
-                        >Job title</label
-                      >
-                      <input
-                        type="Job title"
-                        class="form-control"
-                        id="user-job-title"
-                      />
-                    </div>
-                    <div class="mb-3">
-                      <label for="user-email" class="form-label"
-                        >Email address</label
-                      >
-                      <input
-                        type="email"
-                        class="form-control"
-                        id="user-email"
-                        placeholder="name@example.com"
-                      />
-                    </div>
-                    <div class="mb-3">
-                      <label for="user-img-path" class="form-label"
-                        >Image Path</label
-                      >
-                      <input
-                        type="img path"
-                        class="form-control"
-                        id="user-img-path"
-                      />
-                    </div>
-                    <button
-                      id="add-new-member"
-                      type="submit"
-                      class="btn btn-outline-danger"
-                    >
-                      Aggiungi
-                    </button>
-                  </form>
+      <div class="accordion accordion-flush" id="accordionFlushExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseOne"
+              aria-expanded="false"
+              aria-controls="flush-collapseOne"
+            >
+              Add Team Member
+            </button>
+          </h2>
+          <div
+            id="flush-collapseOne"
+            class="accordion-collapse collapse"
+            data-bs-parent="#accordionFlushExample"
+          >
+            <div class="accordion-body">
+              <form id="add-new-member" class="d-flex flex-column mx-5">
+                <div class="mb-3">
+                  <label for="user-name" class="form-label">Nome</label>
+                  <input type="Nome" class="form-control" id="user-name" />
                 </div>
-              </div>
-            </div>
-      <header class="text-center p-5 text-danger">
-        <h1>Meet Our Team</h1>
-      </header>
-      <div class="text-center">
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi sed
-          labore facilis. Ratione numquam nobis iure ipsam perferendis veniam
-          quaerat totam cupiditate repudiandae distinctio quasi, inventore ea
-          ipsum temporibus molestiae.
-        </p>
-      </div>
-      <div id="member-grid" class="row row-gap-4 my-5 text-center">
-        <!-- <div class="col-12 col-md-6 col-lg-4">
-          <div class="card">
-            <img src="img/female1.png" class="card-img-top" alt="..." />
-            <div class="card-body">
-              <h5 class="card-title">Thomas Raimondi</h5>
-              <div class="job-title">Designer</div>
-              <div class="mail">thomas@raimondi.it</div>
+                <div class="mb-3">
+                  <label for="user-surname" class="form-label">Cognome</label>
+                  <input
+                    type="Cognome"
+                    class="form-control"
+                    id="user-surname"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="user-job-title" class="form-label"
+                    >Job title</label
+                  >
+                  <input
+                    type="Job title"
+                    class="form-control"
+                    id="user-job-title"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="user-email" class="form-label"
+                    >Email address</label
+                  >
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="user-email"
+                    placeholder="name@example.com"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="user-img-path" class="form-label"
+                    >Image Path</label
+                  >
+                  <input
+                    type="img path"
+                    class="form-control"
+                    id="user-img-path"
+                  />
+                </div>
+                <button
+                  id="add-new-member"
+                  type="submit"
+                  class="btn btn-outline-danger"
+                >
+                  Aggiungi
+                </button>
+              </form>
             </div>
           </div>
-        </div> -->
+        </div>
+        <header class="text-center p-5 text-danger">
+          <h1>Meet Our Team</h1>
+        </header>
+        <div class="text-center">
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi sed
+            labore facilis. Ratione numquam nobis iure ipsam perferendis veniam
+            quaerat totam cupiditate repudiandae distinctio quasi, inventore ea
+            ipsum temporibus molestiae.
+          </p>
+        </div>
+        <div id="member-grid" class="row row-gap-4 my-5 text-center"></div>
       </div>
     </div>
     <script

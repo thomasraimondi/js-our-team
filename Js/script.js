@@ -4,7 +4,6 @@ const addNewMember = document.getElementById("add-new-member");
 const accordion = document.querySelector(".accordion-button");
 
 // * Get User Input
-const userInputs = document.querySelectorAll(".accordion-body .form-control");
 const userName = document.getElementById("user-name");
 const userSurname = document.getElementById("user-surname");
 const userRole = document.getElementById("user-job-title");
@@ -90,4 +89,9 @@ addNewMember.addEventListener("submit", (e) => {
   teamMembers.push(member);
   accordion.click();
   renderTeams(teamMembers);
+  userName.requestFullscreen();
+  userSurname.requestFullscreen();
+  userRole.requestFullscreen();
+  userEmail.requestFullscreen();
+  userImg.requestFullscreen();
 });
